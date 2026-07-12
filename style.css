@@ -1,0 +1,131 @@
+:root {
+  --bg-top: #3a2478;
+  --bg-bot: #187a82;
+  --card: rgba(255, 255, 255, 0.06);
+  --line: rgba(255, 255, 255, 0.16);
+  --text: #f4f5f8;
+  --muted: #b9c2cf;
+  --gold: #ffd640;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(170deg, var(--bg-top) 0%, var(--bg-bot) 100%);
+  background-attachment: fixed;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 22px 90px;
+}
+
+header.site {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+header.site .mark {
+  width: 46px; height: 46px;
+  border-radius: 12px;
+  background: #fff;
+  display: grid; place-items: center;
+  font-size: 26px;
+  flex: none;
+}
+
+header.site .name {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  margin-left: 18px;
+}
+nav a:hover { color: #fff; }
+nav { margin-left: auto; }
+
+h1 {
+  font-size: clamp(32px, 6vw, 46px);
+  line-height: 1.15;
+  margin: 0 0 12px;
+  letter-spacing: -0.5px;
+}
+
+.tagline {
+  color: var(--gold);
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0 0 34px;
+}
+
+h2 {
+  font-size: 21px;
+  margin: 38px 0 10px;
+  letter-spacing: -0.2px;
+}
+
+p, li { color: #e6e9ef; }
+.muted { color: var(--muted); font-size: 15px; }
+
+ul { padding-left: 20px; }
+li { margin: 7px 0; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px 26px;
+  margin: 22px 0;
+  backdrop-filter: blur(6px);
+}
+
+.card.good {
+  border-color: rgba(255, 214, 64, 0.45);
+  background: rgba(255, 214, 64, 0.08);
+}
+
+a { color: var(--gold); }
+
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: #1c1300;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 13px 26px;
+  border-radius: 999px;
+  margin-top: 8px;
+}
+
+footer {
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+footer a { color: var(--muted); text-decoration: none; }
+footer a:hover { color: #fff; }
+
+@media (max-width: 520px) {
+  nav a { margin-left: 12px; font-size: 14px; }
+  header.site { flex-wrap: wrap; }
+}
